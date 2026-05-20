@@ -79,13 +79,6 @@ open IRVisualizer.app
 ## Architecture
 
 ```
-IRVisualizer.app
-├── Contents/MacOS/IRVisualizer
-├── Contents/Resources/
-│   ├── Assets.car                    # App icon (compiled asset catalog)
-│   └── Partfun_*.txt                 # Built-in partition functions
-└── Contents/Info.plist
-
 Sources/IRVisualizer/
 ├── IRVisualizerApp.swift             # App entry point, menu commands
 ├── ContentView.swift                 # Main split-view layout, zoom/pan state
@@ -127,7 +120,7 @@ The Metal shader assigns **one GPU thread per frequency point**. Each thread:
 HITRAN CSV files should have at minimum these columns (case-sensitive):
 
 ```
-local_iso_id,global_iso_id,molec_id,nu,sw,gamma_air,gamma_self,elower,n_air,delta_air,...
+local_iso_id,global_iso_id,molec_id,nu,sw,gamma_air,gamma_self,elower,n_air,delta_air,nu-err,sw-err,gamma_air-err,gamma_self-err,n_air-err,delta_air-err
 ```
 
 The column order must match the standard HITRAN CSV export format. You can create this template on HITRAN with your HITRAN account.
