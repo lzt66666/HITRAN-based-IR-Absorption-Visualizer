@@ -1,6 +1,7 @@
 # IR Absorption Visualizer
 
-##This macOS version is an AI optimized app based on my original MATLAB UI App version (AblineQuickCheck.mlapp)
+## This macOS version is an AI optimized app based on my original MATLAB UI App version. 
+## You can modify this project to a CUDA/Vulcan/OpenCl-based version to run on Windows/Linux. Or just use AblineQuickCheck.mlapp despite of its poor performance.
 
 A SwiftUI + Metal GPU-accelerated molecular absorption spectrum simulator for macOS, based on the HITRAN database. Computes Voigt line-by-line absorption spectra with interactive zoom/pan and real-time display.
 
