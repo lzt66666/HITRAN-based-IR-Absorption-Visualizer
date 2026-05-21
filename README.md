@@ -77,26 +77,6 @@ open IRVisualizer.app
 - **Trackpad**: drag to pan, pinch to zoom
 - **Legend**: appears below plot when multiple traces are overlaid
 
-## Architecture
-
-```
-Sources/IRVisualizer/
-├── IRVisualizerApp.swift             # App entry point, menu commands
-├── ContentView.swift                 # Main split-view layout, zoom/pan state
-├── Engine/
-│   ├── Abline.swift                  # Core abline computation (Swift port)
-│   ├── Voigt.swift                   # Humlíček Voigt (exact match to Voigtf.m)
-│   ├── VoigtLUT.swift                # Voigt LUT for GPU path
-│   ├── GPUEngine.swift               # Metal compute pipeline + shader
-│   ├── SimulationEngine.swift        # CPU/GPU dispatch, sliding window
-│   └── Downsample.swift              # LTTB downsampling algorithm
-├── Models/
-│   └── HitranLine.swift              # Data models, partition function parser
-└── Views/
-    ├── PlotView.swift                # Chart wrapper with LTTB + zoom filter
-    ├── Step1View.swift               # Data import panel
-    └── Step2View.swift               # Parameter input panel
-```
 
 ### GPU Compute Pipeline
 
