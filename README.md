@@ -22,36 +22,18 @@ A SwiftUI + Metal GPU-accelerated molecular absorption spectrum simulator for ma
 
 ### Prerequisites
 
-- macOS 13.0+
-- Xcode 15+ (for building from source)
+- macOS 26.5
+- Xcode 26 (for building from source)
 - Python 3 + Pillow (`pip3 install Pillow`) — required only for app icon generation in the build script
 
 ### Build & Run
 
-```bash
-./build_app.sh        # release build + package .app
-open IRVisualizer.app
-```
+Using Xcode to build and run.
 
-Or manually:
+### Other versions
 
-```bash
-swift build -c release
-mkdir -p IRVisualizer.app/Contents/MacOS IRVisualizer.app/Contents/Resources
-cp .build/release/IRVisualizer IRVisualizer.app/Contents/MacOS/
-# copy Resources/Assets.car and Partfun_*.txt (see build_app.sh for details)
-open IRVisualizer.app
-```
-
-### Build for macOS 12
-
-A macOS 12 compatible version is included in the `IRVisualizer_macOS12/` directory. It uses custom Core Graphics rendering instead of Swift Charts (which requires macOS 13+).
-
-```bash
-cd IRVisualizer_macOS12
-./build_app.sh
-open IRVisualizer.app
-```
+A macOS 12 compatible version is included. (xxx_macOS12)
+A mobile adapted version is included. (xxx_MobileApp, tested on iPhone 16 Pro)
 
 ## Usage
 
